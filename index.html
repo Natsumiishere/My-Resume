@@ -4,70 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobin Gholipour | مبین قلی‌پور</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- کنترلر زبان بدون جاوااسکریپت -->
+    <!-- پس‌زمینه متحرک و شبکه‌ای -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-purple"></div>
+    <div class="glow-orb orb-gold"></div>
+
+    <!-- کنترلرهای تغییر زبان (بدون JS) -->
     <input type="radio" name="lang" id="lang-fa" checked>
     <input type="radio" name="lang" id="lang-en">
 
+    <!-- کنترلرهای تب‌های فارسی (بدون JS) -->
+    <input type="radio" name="fa-tab" id="fa-tab-about" checked>
+    <input type="radio" name="fa-tab" id="fa-tab-skills">
+    <input type="radio" name="fa-tab" id="fa-tab-projects">
+
+    <!-- کنترلرهای تب‌های انگلیسی (بدون JS) -->
+    <input type="radio" name="en-tab" id="en-tab-about" checked>
+    <input type="radio" name="en-tab" id="en-tab-skills">
+    <input type="radio" name="en-tab" id="en-tab-projects">
+
     <div class="wrapper">
-        <!-- نوار انتخاب زبان -->
+        <!-- نوار بالایی: وضعیت آنلاین + تغییر زبان -->
         <div class="top-bar">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span class="fa-only">آماده یادگیری و همکاری</span>
+                <span class="en-only">Open to Collaborate</span>
+            </div>
+
             <div class="lang-switcher">
                 <label for="lang-fa">فارسی 🇮🇷</label>
                 <label for="lang-en">English 🇬🇧</label>
             </div>
         </div>
 
-        <!-- ================= بخش فارسی ================= -->
+        <!-- ================= محتوای فارسی ================= -->
         <div class="fa-content">
-            <header class="hero">
-                <span class="badge">🎓 دانش‌آموز رشته کامپیوتر</span>
-                <h1>مبین قلی‌پور</h1>
-                <p class="subtitle">توسعه‌دهنده پایتون (UI/Backend) و طراح فرانت‌اند وب</p>
-                <div class="bio-box">
-                    <p>
-                        سلام! من مبین هستم، هنرجو و دانش‌آموز رشته کامپیوتر که با اشتیاق در دنیای برنامه‌نویسی و طراحی وب فعالیت می‌کنم. تمرکز اصلی من روی توسعه رابط کاربری (UI) با پایتون و طراحی صفحات وب مدرن و واکنش‌گرا است.
-                    </p>
-        
+            <!-- هدر اصلی -->
+            <header class="hero-card">
+                <div class="avatar-ring">
+                    <div class="avatar-box">MG</div>
                 </div>
+                <span class="role-badge">🎓 دانش‌آموز رشته کامپیوتر</span>
+                <h1 class="glitch-title">مبین قلی‌پور</h1>
+                <p class="subtitle">توسعه‌دهنده پایتون (UI) • طراح فرانت‌اند وب</p>
+
+                <!-- منوی تب‌بندی -->
+                <nav class="tab-nav">
+                    <label for="fa-tab-about" class="tab-btn fa-lbl-about">👤 درباره من</label>
+                    <label for="fa-tab-skills" class="tab-btn fa-lbl-skills">⚡ مهارت‌ها و سوابق</label>
+                    <label for="fa-tab-projects" class="tab-btn fa-lbl-projects">🚀 پروژه‌ها و ارتباط</label>
+                </nav>
             </header>
 
-            <div class="grid">
-                <!-- مهارت‌ها -->
-                <section class="card">
-                    <h2>⚡ مهارت‌های فنی</h2>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>برنامه‌نویسی پایتون (Python & UI)</span>
-                            <span class="skill-level">نیمه‌حرفه‌ای</span>
+            <!-- تب ۱: درباره من -->
+            <section class="tab-panel panel-fa-about">
+                <div class="glass-card">
+                    <h2>✨ معرفی کوتاه</h2>
+                    <p class="lead-text">
+                        سلام! من مبین هستم؛ هنرجو و دانش‌آموز رشته کامپیوتر که با اشتیاق دنیای کدنویسی و طراحی وب را دنبال می‌کنم. تمرکز اصلی من روی ساخت رابط‌های کاربری (UI) کاربردی با پایتون و طراحی وب‌سایت‌های مدرن، تمیز و واکنش‌گرا است.
+                    </p>
+                    <div class="partner-banner">
+                        <span class="sparkle">💫</span>
+                        <div>
+                            <strong>همراه و شریک مسیر در زندگی و پروژه‌ها:</strong>
+                            <span class="gold-text">Whity</span>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تب ۲: مهارت‌ها و سوابق -->
+            <section class="tab-panel panel-fa-skills">
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <h2>⚡ مهارت‌های فنی</h2>
+                        
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>برنامه‌نویسی پایتون (Python & UI)</span>
+                                <span class="tag">نیمه‌حرفه‌ای</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 68%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>طراحی فرانت‌اند (HTML & CSS)</span>
+                                <span class="tag">مقدماتی تا متوسط</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 58%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>ادوب پریمیر (Premiere Pro)</span>
+                                <span class="tag">نیمه‌حرفه‌ای</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 65%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>ادوب فتوشاپ (Photoshop)</span>
+                                <span class="tag">پایه</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 42%;"></div></div>
+                        </div>
                     </div>
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>طراحی فرانت‌اند (HTML & CSS)</span>
-                            <span class="skill-level">مقدماتی تا متوسط</span>
+                    <div class="glass-card">
+                        <h2>💼 سوابق و تحصیلات</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h3>همکاری و فعالیت در کافی‌نت</h3>
+                                <p>تجربه کار عملی در محیط کافی‌نت، ارائه خدمات نرم‌افزاری، ثبت‌نام‌های اینترنتی، کار با سیستم‌های اداری و راهنمایی کاربران.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot gold-dot"></div>
+                                <h3>تحصیل در رشته کامپیوتر</h3>
+                                <p>دانش‌آموز رشته کامپیوتر؛ در حال یادگیری اصولی الگوریتم، توسعه وب و برنامه‌نویسی پایتون.</p>
+                            </div>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 55%;"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تب ۳: پروژه‌ها و ارتباط -->
+            <section class="tab-panel panel-fa-projects">
+                <div class="glass-card featured-project">
+                    <div class="project-badge">نمونه‌کار ویژه</div>
+                    <h2>🏛️ وب‌سایت تاریخی Historium</h2>
+                    <p>یک پروژه وب اختصاصی با موضوع تاریخ که با تمرکز بر خوانایی، ساختار منظم و طراحی چشم‌نواز پیاده‌سازی شده است.</p>
+                    <a href="https://juswhity.github.io/Historium/" target="_blank" class="neon-btn">
+                        مشاهده آنلاین سایت Historium ↗
+                    </a>
+                </div>
+
+                <div class="glass-card contact-box">
+                    <h2>📬 راه‌های ارتباطی مستقیم</h2>
+                    <div class="social-grid">
+                        <a href="https://github.com/Natsumiishere" target="_blank" class="social-card">
+                            <span class="icon">💻</span>
+                            <div>
+                                <strong>GitHub</strong>
+                                <small>@Natsumiishere</small>
+                            </div>
+                        </a>
+                        <a href="mailto:mobingholipour2@gmail.com" class="social-card">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong>Gmail</strong>
+                                <small>mobingholipour2@gmail.com</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <div class="en-content">
+            <header class="hero-card">
+                <div class="avatar-ring">
+                    <div class="avatar-box">MG</div>
+                </div>
+                <span class="role-badge">🎓 Computer Science Student</span>
+                <h1 class="glitch-title">Mobin Gholipour</h1>
+                <p class="subtitle">Python Developer (UI) • Front-End Web Designer</p>
+
+                <!-- Tab Navigation -->
+                <nav class="tab-nav">
+                    <label for="en-tab-about" class="tab-btn en-lbl-about">👤 About Me</label>
+                    <label for="en-tab-skills" class="tab-btn en-lbl-skills">⚡ Skills & Experience</label>
+                    <label for="en-tab-projects" class="tab-btn en-lbl-projects">🚀 Projects & Contact</label>
+                </nav>
+            </header>
+
+            <!-- Tab 1: About -->
+            <section class="tab-panel panel-en-about">
+                <div class="glass-card">
+                    <h2>✨ Who Am I?</h2>
+                    <p class="lead-text">
+                        Hi! I'm Mobin, a passionate Computer Science student diving deep into programming and web design. My primary focus is crafting intuitive User Interfaces (UI) with Python and building sleek, responsive websites.
+                    </p>
+                    <div class="partner-banner">
+                        <span class="sparkle">💫</span>
+                        <div>
+                            <strong>Life & Creative Partner:</strong>
+                            <span class="gold-text">Whity</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab 2: Skills & Experience -->
+            <section class="tab-panel panel-en-skills">
+                <div class="grid-2">
+                    <div class="glass-card">
+                        <h2>⚡ Technical Skills</h2>
+                        
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Python Programming & UI</span>
+                                <span class="tag">Intermediate</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 68%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Front-End Design (HTML & CSS)</span>
+                                <span class="tag">Basic - Intermediate</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 58%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Adobe Premiere Pro</span>
+                                <span class="tag">Intermediate</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 65%;"></div></div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-info">
+                                <span>Adobe Photoshop</span>
+                                <span class="tag">Basic</span>
+                            </div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 42%;"></div></div>
+                        </div>
                     </div>
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>ادوب پریمیر (Adobe Premiere)</span>
-                            <span class="skill-level">نیمه‌حرفه‌ای</span>
+                    <div class="glass-card">
+                        <h2>💼 Experience & Education</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h3>Internet Cafe Assistant</h3>
+                                <p>Hands-on experience providing software assistance, online registrations, office tools support, and daily technical help.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot gold-dot"></div>
+                                <h3>Computer Science Student</h3>
+                                <p>Currently studying Computer Science in high school, focusing on algorithms, web development, and Python UI apps.</p>
+                            </div>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>ادوب فتوشاپ (Adobe Photoshop)</span>
-                            <span class="skill-level">پایه</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style
+            <!-- Tab 3: Projects & Contact -->
+            <section class="tab-panel panel-en-projects">
+                <div class="glass-card featured-project">
+                    <div class="project-badge">Featured Work</div>
+                    <h2>🏛️ Historium Web Project</h2>
+                    <p>A dedicated historical website designed and developed from scratch with clean structure and engaging presentation.</p>
+                    <a href="https://juswhity.github.io/Historium/" target="_blank" class="neon-btn">
+                        Launch Historium Live ↗
+                    </a>
+                </div>
+
+                <div class="glass-card contact-box">
+                    <h2>📬 Get In Touch</h2>
+                    <div class="social-grid">
+                        <a href="https://github.com/Natsumiishere" target="_blank" class="social-card">
+                            <span class="icon">💻</span>
+                            <div>
+                                <strong>GitHub</strong>
+                                <small>@Natsumiishere</small>
+                            </div>
+                        </a>
+                        <a href="mailto:mobingholipour2@gmail.com" class="social-card">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong>Gmail</strong>
+                                <small>mobingholipour2@gmail.com</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            Crafted with Pure HTML & CSS • <span>Mobin Gholipour</span>
+        </footer>
+    </div>
+
+</body>
+</html>
